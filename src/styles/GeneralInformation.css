@@ -1,0 +1,15 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+fieldset > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    text-align: left;
+}

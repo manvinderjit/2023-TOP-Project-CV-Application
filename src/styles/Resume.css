@@ -1,0 +1,11 @@
+li {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.info-general {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+}
