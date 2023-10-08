@@ -3,17 +3,18 @@ import GeneralInformation from "./GeneralInformation";
 import EducationalExperience from "./EducationalExperience";
 import ProfessionalExperience from "./ProfessionalExperience";
 
-function InformationForm({onSubmit, onChange}) {
-
+function InformationForm({ onSubmit, onChange, submitEducationDetails }) {
     return (
-        <form onSubmit={onSubmit}>
-            <GeneralInformation onChange={onChange}></GeneralInformation>
-            {/* <EducationalExperience></EducationalExperience>
-            <ProfessionalExperience></ProfessionalExperience> */}
-            <div>
-                <button type="submit">Generate Resume</button>
-            </div>
-        </form>
+        <div className="forms-wrapper">
+            <GeneralInformation
+                onSubmit={onSubmit}
+                onChange={onChange}
+            ></GeneralInformation>
+            <EducationalExperience
+                submitEducationDetails={submitEducationDetails}
+            ></EducationalExperience>
+            {/* <ProfessionalExperience></ProfessionalExperience> */}
+        </div>
     );
 }
 
