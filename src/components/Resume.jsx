@@ -20,7 +20,7 @@ function ShowGeneralInformationResume({ generalInformation = "" }) {
     );
 }
 
-function ShowEducationalInformationResume({ educationalInformation = [] }) {    
+function ShowEducationalInformationResume({ educationalInformation = [], handleEditInformation }) {    
     return(
         <div>
             {educationalInformation.map((information) => {
@@ -56,6 +56,13 @@ function ShowEducationalInformationResume({ educationalInformation = [] }) {
                             );
                             
                         })} */}
+                        <button
+                            type="button"
+                            id={information._id}
+                            onClick={handleEditInformation}
+                        >
+                            Edit
+                        </button>
                     </ul>
                 );
             })}
@@ -66,6 +73,7 @@ function ShowEducationalInformationResume({ educationalInformation = [] }) {
 function Resume({
     generalInformation = "",
     educationalInformation = [],
+    handleEditInformation
 }) {
     return (
         <div id="resume-wrapper">
@@ -78,6 +86,7 @@ function Resume({
                 <h3>Education Experience</h3>
                 <ShowEducationalInformationResume
                     educationalInformation={educationalInformation}
+                    handleEditInformation={handleEditInformation}
                 ></ShowEducationalInformationResume>
             </div>
         </div>

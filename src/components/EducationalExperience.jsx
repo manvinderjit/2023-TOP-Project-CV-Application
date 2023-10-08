@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function EducationDetails({ submitEducationDetails }) {
     return (
-        <form onSubmit={submitEducationDetails}>
+        <form id="form-education" onSubmit={submitEducationDetails} >
             <fieldset>
                 <legend>Educational Experience</legend>
                 <div>
@@ -57,7 +57,7 @@ function EducationDetails({ submitEducationDetails }) {
                     />
                 </div>
             </fieldset>
-            <button type="submit">
+            <button type="submit" name="submit-data">
                 Add More Detail
             </button>
         </form>
